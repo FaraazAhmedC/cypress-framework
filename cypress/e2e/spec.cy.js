@@ -124,13 +124,8 @@ describe('My First Test', () => {
 
     // This will fail the test if "type" is not found (normal behavior)
     cy.contains('type')
+    cy.contains('hype')
 
-    // This will safely check for "hype" and log if not found
-    cy.get('body').then(($body) => {
-      if ($body.text().includes('hype')) {
-        cy.contains('hype')
-      } else {
-        cy.log('Could not find "hype"')
       }
     })
   })
