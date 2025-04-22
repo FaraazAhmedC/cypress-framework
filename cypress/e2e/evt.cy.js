@@ -32,6 +32,7 @@ describe('GitHub Login Test', () => {
     cy.get('button').contains('Commit changes...').click(); // Click the Commit changes button
     cy.get('#commit-message-input').clear().type(`Update README with current time: ${currTime}`); // Type commit message
     cy.focused().type('{enter}')
+    // Step 6: Logout
     cy.get('img.avatar.circle').click();
     cy.get('a[href="/logout"]').click();
     cy.get('a[href="/logout"]').click();

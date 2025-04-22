@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Account Activation</title>
+</head>
+<body>
+    <h2 id="message">Activating your recruiter account, please wait...</h2>
+
+    <script>
+        // Get the message from URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const message = params.get("message") || "Your recruiter account has been successfully activated! You can now log in.";
+
+        // Display the message on the page
+        document.getElementById("message").textContent = message;
+    </script>
+</body>
+</html>
